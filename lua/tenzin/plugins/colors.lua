@@ -6,6 +6,9 @@ function LineNumberColors()
 	-- transparent background
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+	-- set highlight colour
+	vim.cmd('hi Visual  guifg=Black guibg=LightBlue gui=none')
 end
 
 return {
