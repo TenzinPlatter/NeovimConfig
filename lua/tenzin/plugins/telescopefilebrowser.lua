@@ -1,5 +1,4 @@
 return {
-	--[[
 	'https://github.com/nvim-telescope/telescope-file-browser.nvim',
 	dependencies = {
 		"nvim-telescope/telescope.nvim",
@@ -11,7 +10,7 @@ return {
 			extensions= {
 				file_browser = {
 					theme = 'ivy',
-					hijack_netrw = true,
+					-- hijack_netrw = true,
 					grouped = true,
 					files = true,
 				}
@@ -25,5 +24,4 @@ return {
 			vim.api.nvim_feedkeys(escKey, 'm', true)
 		end)
 	end
-]]
 }
