@@ -9,6 +9,6 @@ return {
 		vim.keymap.set('n', '<leader>k', function() nvterm.toggle("float") end)
 
 		-- exit insert mode
-		vim.keymap.set('t', '<C-space>', '<C-\\><C-n>')
+		vim.keymap.set('t', '<C-x>', '<C-\\><C-n>')
 	end
 }

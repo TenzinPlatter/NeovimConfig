@@ -3,7 +3,7 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.o.statuscolumn = "%s %l %r "
 
-vim.keymap.set('n', '<C-n>', vim.cmd.Ex)
+-- vim.keymap.set('n', '<C-n>', vim.cmd.Ex)
 
 -- make the window biger vertically
 vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]], {})
@@ -25,11 +25,14 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv'")
 vim.keymap.set('v', 'K', ":m '>-2<CR>gv=gv'")
 
 -- Autosave on exit of insert if text has been changed
+-- remove space below to comment out autosave while editing config
+-- [[
 vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
   pattern = { "*" },
   command = "wall",
   nested = true,
 })
+-- ]]
 
 -- window navigation
 vim.keymap.set('n', '<C-j>', '<C-W>j')
