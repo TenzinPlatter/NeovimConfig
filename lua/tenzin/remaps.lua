@@ -3,7 +3,7 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.o.statuscolumn = "%s %l %r "
 
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+vim.keymap.set('n', '<C-n>', vim.cmd.Ex)
 
 -- make the window biger vertically
 vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]], {})
