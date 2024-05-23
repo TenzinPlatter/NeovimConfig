@@ -1,4 +1,4 @@
-function LineNumberColors()
+function LineNumberColours()
 	vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#51B3EC', bold=true })
 	vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
 	vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#FB508F', bold=true })
@@ -7,8 +7,9 @@ function LineNumberColors()
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
-	-- set highlight colour
+	-- set highlight colours
 	vim.cmd('hi Visual  guifg=Black guibg=LightBlue gui=none')
+	vim.cmd('hi MatchParen guibg=#82aaff')
 end
 
 return {
@@ -18,7 +19,7 @@ return {
 		priority = 1000,
 		config = function()
 			require('palenightfall').setup({})
-			LineNumberColors()
+			LineNumberColours()
 		end
 	}
 
