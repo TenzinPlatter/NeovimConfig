@@ -21,8 +21,8 @@ vim.keymap.set('i', '<C-k>', '<up>')
 vim.keymap.set('i', '<C-l>', '<right>')
 
 -- move selection up/ down
-vim.keymap.set("v", "<C-j>", ":m '<+2<CR>gv=gv")
-vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Autosave on exit of insert if text has been changed
 -- remove space below to comment out autosave while editing config
