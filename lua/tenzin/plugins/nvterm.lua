@@ -1,7 +1,16 @@
 return {
 	'https://github.com/zbirenbaum/nvterm',
 	config = function()
-		require("nvterm").setup()
+		require("nvterm").setup({
+			terminals = {
+				type_opts = {
+					float = {
+						width = 0.7,
+						height = 0.7,
+					}
+				}
+			}
+		})
 
 		local nvterm = require("nvterm.terminal")
 		vim.keymap.set('n', '<leader>h', function() nvterm.toggle("horizontal") end)
