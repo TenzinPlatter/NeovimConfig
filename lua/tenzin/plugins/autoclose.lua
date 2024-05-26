@@ -1,10 +1,7 @@
 return {
-	'https://github.com/m4xshen/autoclose.nvim',
-	config = function()
-		require("autoclose").setup({
-			options = {
-				pair_spaces = true
-			}
-		})
-	end
+	'https://github.com/windwp/nvim-autopairs',
+	event = 'InsertEnter',
+	config = true,
+	opts = {
+	},
 }
