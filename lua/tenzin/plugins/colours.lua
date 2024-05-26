@@ -10,6 +10,8 @@ function Aesthetics()
 	-- set highlight colours
 	vim.cmd('hi Visual  guifg=Black guibg=LightBlue gui=none')
 	vim.cmd('hi MatchParen guibg=#82aaff')
+	vim.cmd('hi Search guibg=#FEFFA7')
+
 
 	-- set no code wrap
 	vim.cmd('set nowrap')
