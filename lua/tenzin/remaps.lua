@@ -3,6 +3,9 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.o.statuscolumn = "%s %l %r "
 
+-- when using gd (go definition), center text
+vim.keymap.set('n', 'gd', 'gdzz')
+
 -- clears highlight left after searching
 vim.keymap.set('n', '<leader>/', function()
 	vim.cmd('nohlsearch')
