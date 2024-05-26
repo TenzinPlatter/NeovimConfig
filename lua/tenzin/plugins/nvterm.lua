@@ -5,8 +5,8 @@ return {
 			terminals = {
 				type_opts = {
 					float = {
-						width = 0.7,
-						height = 0.7,
+						width = 0.9,
+						height = 0.9,
 					}
 				}
 			}
