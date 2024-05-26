@@ -3,6 +3,8 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.o.statuscolumn = "%s %l %r "
 
+vim.keymap.set('n', ';', ':')
+
 -- when using gd (go definition), center text
 vim.keymap.set('n', 'gd', 'gdzz')
 
