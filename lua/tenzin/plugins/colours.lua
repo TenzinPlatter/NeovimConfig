@@ -11,6 +11,7 @@ function Aesthetics()
 	vim.cmd('hi Visual  guifg=Black guibg=LightBlue gui=none')
 	vim.cmd('hi MatchParen guibg=#82aaff')
 	vim.cmd('hi Search guibg=#FEFFA7')
+	vim.cmd('hi CursorLineNr guibg=White')
 
 
 	-- set no code wrap
