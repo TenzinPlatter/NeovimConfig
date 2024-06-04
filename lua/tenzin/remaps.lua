@@ -5,6 +5,7 @@ vim.o.statuscolumn = "%s %l %r "
 
 -- when using gd (go definition), center text
 vim.keymap.set('n', 'gd', 'gdzz')
+vim.keymap.set('n', '<C-o>', '<C-o>zz')
 
 -- clears highlight left after searching
 vim.keymap.set('n', '<leader>/', function()
@@ -20,7 +21,7 @@ vim.keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]], {})
 -- make the window smaller horizontally by pressing shift and -
 vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]], {})
 
--- move in insert with CTRL + h/j/k/l
+-- move in insert with OPT + h/j/k/l
 vim.keymap.set('i', '<C-h>', '<left>')
 vim.keymap.set('i', '<C-j>', '<down>')
 vim.keymap.set('i', '<C-k>', '<up>')
