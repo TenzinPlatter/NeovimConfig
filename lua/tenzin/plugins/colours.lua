@@ -29,8 +29,20 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {},
+	},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
 		config = function()
-			vim.cmd[[colorscheme tokyonight]]
+			require("catppuccin").setup({
+				flavour = "macchiato",
+				transparent_background = true,
+				styles = {
+					keywords = { "italic" }
+				}
+			})
+			vim.cmd.colorscheme("catppuccin")
 			Aesthetics()
 		end
 	}
