@@ -23,11 +23,16 @@ return {
 		'https://github.com/JoosepAlviste/palenightfall.nvim',
 		lazy = false,
 		priority = 1000,
+	},
+	{
+		"https://github.com/folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
 		config = function()
-			require('palenightfall').setup({})
+			vim.cmd[[colorscheme tokyonight]]
 			Aesthetics()
 		end
 	}
-
 }
 
