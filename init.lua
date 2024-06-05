@@ -3,6 +3,9 @@ vim.g.mapleader = ' '
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- for obsidian.nvim
+vim.opt.conceallevel = 1
+
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 

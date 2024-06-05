@@ -13,7 +13,6 @@ function Aesthetics()
 	vim.cmd('hi Search guibg=#FEFFA7')
 	vim.cmd('hi CursorLineNr guibg=White')
 
-
 	-- set no code wrap
 	vim.cmd('set nowrap')
 end
