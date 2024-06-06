@@ -11,10 +11,5 @@ return {
 				path = "~/obsidian/notes"
 			}
 		},
-		templates = {
-			folder = "templates",
-			date_format = "%a-%d-%m-%Y",
-			time_format = "%M:%H"
-		}
-	},
+	}
 }

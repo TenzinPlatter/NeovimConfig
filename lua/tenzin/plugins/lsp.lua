@@ -35,7 +35,9 @@ return {
 
 			})
 
-			local on_attach = function(client, bufnr)
+			local my_capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+			local my_on_attach = function(client, bufnr)
 				-- supposed to set up inlay hints, doesn't work :(
 				if client.server_capabilities.inlayHintProvider then
 					vim.lsp.inlay_hint.enable(true, { bufnr = 0 })
@@ -47,87 +49,42 @@ return {
 				vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 				vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
 				vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references)
-				vim.keymap.set('n', 'H', vim.lsp.buf.hover)
+				vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 			end
 
-			local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			local lspconfig = require("lspconfig")
+			require("mason-lspconfig").setup_handlers({
+				function (server_name)
+					lspconfig[server_name].setup({
+						on_attach = my_on_attach,
+						capabilities = my_capabilities
+					})
+				end,
 
-			require("lspconfig").typos_lsp.setup({
-				on_attach = on_attach,
-				capabilities = capabilities
+				require("lspconfig").ltex.setup({
+					on_attach = my_on_attach,
+					capabilities = my_capabilities,
+					settings = {
+						ltex = {
+							language = "en-GB"
+						}
+					}
+				}),
 
-			})
-
-			require("lspconfig").clangd.setup({
-				on_attach = on_attach,
-				capabilities = capabilities
-
-			})
-
-			require("lspconfig").jsonls.setup({
-				on_attach = on_attach,
-				capabilities = capabilities
-
-			})
-
-			require("lspconfig").jdtls.setup({
-				on_attach = on_attach,
-				capabilities = capabilities
-
-			})
-
-			require("lspconfig").tsserver.setup({
-				on_attach = on_attach,
-				capabilities = capabilities
-
-			})
-
-			require("lspconfig").ltex.setup({
-				on_attach = on_attach,
-				capabilities = capabilities
-
-			})
-
-			require("lspconfig").lua_ls.setup({
-				on_attach = on_attach,
-				capabilities = capabilities,
-				settings = {
-					Lua = {
-						diagnostics = {
-							globals = {
-								"vim",
+				require("lspconfig").lua_ls.setup({
+					on_attach = my_on_attach,
+					capabilities = my_capabilities,
+					settings = {
+						Lua = {
+							diagnostics = {
+								globals = {
+									"vim",
+								}
 							}
 						}
 					}
-				}
-
+				}),
 			})
-
-			require("lspconfig").autotools_ls.setup({
-				on_attach = on_attach,
-				capabilities = capabilities
-
-			})
-
-			require("lspconfig").markdown_oxide.setup({
-				on_attach = on_attach,
-				capabilities = capabilities
-
-			})
-
-			require("lspconfig").jedi_language_server.setup({
-				on_attach = on_attach,
-				capabilities = capabilities
-
-			})
-
-			require("lspconfig").r_language_server.setup({
-				on_attach = on_attach,
-				capabilities = capabilities
-
-			})
-
-
 		end
 	}
 }

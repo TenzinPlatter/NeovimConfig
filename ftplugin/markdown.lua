@@ -2,4 +2,5 @@
 vim.cmd('set wrap')
 vim.opt.colorcolumn = ""
 
-vim.opt.textwidth = 100
+-- Adds splits line if goes over 100 characters
+-- vim.opt.textwidth = 100
