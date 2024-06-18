@@ -4,8 +4,8 @@ function Aesthetics()
 	vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#FB508F', bold=true })
 
 	-- transparent background
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+--	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+--	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 	-- set highlight colours
 	vim.cmd('hi Visual  guifg=Black guibg=LightBlue gui=none')
@@ -19,9 +19,12 @@ end
 
 return {
 	{
-		'https://github.com/JoosepAlviste/palenightfall.nvim',
+		'https://github.com/wilmanbarrios/palenight.nvim',
 		lazy = false,
 		priority = 1000,
+		config = function()
+			require("palenight").set()
+		end
 	},
 	{
 		"https://github.com/folke/tokyonight.nvim",
@@ -36,6 +39,7 @@ return {
 	},
 	{
 		"https://github.com/folke/tokyonight.nvim",
+			--[[
 		config = function()
 			require("tokyonight").setup({
 				style = "storm",
@@ -44,9 +48,10 @@ return {
 					functions = { italic = true }
 				}
 			})
-			vim.cmd[[colorscheme tokyonight]]
+			vim.cmd(colorscheme tokyonight)
 			Aesthetics()
 		end
+		]]
 	}
 }
 
