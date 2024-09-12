@@ -1,3 +1,21 @@
+vim.g.mapleader = ' '
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup("tenzin.plugins", {})
+require("tenzin.remaps")
+
 -- disable deprecated messages on startup
 vim.deprecate = function() end
 
@@ -25,7 +43,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-
 function Aesthetics(colourscheme)
 	colourscheme = colourscheme or "tokyonight"
 
@@ -52,8 +69,6 @@ function Aesthetics(colourscheme)
 	vim.cmd('set nowrap')
 end
 
-vim.g.mapleader = ' '
-
 --disables netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -66,21 +81,6 @@ vim.opt.cursorlineopt = 'number'
 
 vim.opt.termguicolors = true
 
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
-
-require("lazy").setup("tenzin.plugins", {})
-require("tenzin.remaps")
 
 -- sets theme, either pass in theme or will use tokyonight as default
 Aesthetics("gruvbox")
