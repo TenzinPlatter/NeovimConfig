@@ -27,6 +27,8 @@ return {
 					"markdown_oxide",
 					"pyright",
 					"rust_analyzer",
+					"emmet_language_server",
+					"emmet_ls",
 				}
 
 			})
