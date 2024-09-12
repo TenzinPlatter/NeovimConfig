@@ -10,8 +10,9 @@ vim.keymap.set('n', '<leader>i', ":vsp<CR>:vsp<CR>:vsp<CR><C-h><C-h><C-h><C-h> w
 -- resize window to 80 characters wide
 vim.keymap.set('n', '<leader>w', ':vertical resize 80<CR>')
 
--- ctrl shift i to do class + init boilerplate for python
---vim.keymap.set('n', '<C-I>', 'iclass Class:<CR>def __init__(self):<CR><esc>')
+-- ctrl i to do html boiler plate
+-- tab is pressed too fast for lsp
+-- vim.keymap.set('n', '<C-i>', 'i!<tab><esc>ggVG=<esc>')
 
 -- when using gd (go definition), center text
 vim.keymap.set('n', 'gd', 'gdzz')
