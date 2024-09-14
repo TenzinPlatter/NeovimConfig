@@ -29,6 +29,7 @@ return {
 					"rust_analyzer",
 					"emmet_language_server",
 					"emmet_ls",
+					"typescript_language_server",
 				}
 
 			})
