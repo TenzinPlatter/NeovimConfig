@@ -10,8 +10,7 @@ return {
 			inlay_hints = { enabled = true },
 		},
 		config = function()
-			require("mason").setup({
-				ui = {
+			require("mason").setup({ ui = {
 					icons = {
 						package_installed = "✓",
 						package_pending = "➜",
@@ -29,7 +28,7 @@ return {
 					"rust_analyzer",
 					"emmet_language_server",
 					"emmet_ls",
-					"typescript_language_server",
+					"ts_ls",
 				}
 
 			})
@@ -83,6 +82,20 @@ return {
 									 }
 							 }
 					 }
+				end,
+
+				["clangd"] = function ()
+					lspconfig.clangd.setup({
+						on_attach = my_on_attach,
+						capabilities = my_capabilities,
+						filetypes = { "c", "cpp", "arduino", "ino" },
+						root_dir = function () return vim.loop.cwd() end,
+						cmd = {
+							"clangd",
+							"--header-insertion=never",
+							"--limit-results=500",
+						},
+					})
 				end,
 
 				["ltex"] = function ()
