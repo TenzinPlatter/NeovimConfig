@@ -90,8 +90,8 @@ vim.opt.shiftwidth = 2
 vim.opt.colorcolumn = "80"
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.o.statuscolumn = "%s %l %r "
 vim.opt.mouse = ""
-vim.o.statuscolumn = "%s %l %r"
 
 vim.g.rustaceanvim = {
   -- Plugin configuration
