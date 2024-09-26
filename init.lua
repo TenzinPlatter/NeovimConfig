@@ -30,10 +30,7 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
 -- ]]
 
 -- Highlight Yanked area
-vim.api.nvim_create_autocmd('TextYankPost', {
-  group = vim.api.nvim_create_augroup('highlight_yank', {}),
-  desc = 'Highlight selection on yank',
-  pattern = '*',
+vim.api.nvim_create_autocmd('TextYankPost', { group = vim.api.nvim_create_augroup('highlight_yank', {}), desc = 'Highlight selection on yank', pattern = '*',
   callback = function()
     vim.highlight.on_yank {
 			higroup = 'Visual',
@@ -74,10 +71,6 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 
 vim.opt.termguicolors = true
-
-
--- sets theme, either pass in theme or will use tokyonight as default
-Aesthetics("gruvbox")
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2

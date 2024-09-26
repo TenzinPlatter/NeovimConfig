@@ -1,5 +1,21 @@
 return {
 	{
+		"https://github.com/zaldih/themery.nvim",
+		config = function ()
+			vim.keymap.set('n', '<leader>tp', ':Themery<CR>')
+
+			require("themery").setup({
+				themes = {
+					"gruvbox",
+					"palenight",
+					"tokyonight",
+					"catppuccin",
+					"cyberdream",
+				}
+			})
+		end
+	},
+	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
 		config = function()
@@ -13,12 +29,6 @@ return {
 		config = function()
 			require("palenight").set()
 		end
-	},
-	{
-		"https://github.com/folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
 	},
 	{
 		"catppuccin/nvim",
