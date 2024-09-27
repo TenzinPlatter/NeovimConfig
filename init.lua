@@ -40,8 +40,6 @@ vim.api.nvim_create_autocmd('TextYankPost', { group = vim.api.nvim_create_augrou
   end,
 })
 
-vim.cmd("colorscheme gruvbox")
-
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#51B3EC', bold=true })
 vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#FB508F', bold=true })
@@ -77,7 +75,6 @@ vim.opt.shiftwidth = 2
 vim.opt.colorcolumn = "80"
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.o.statuscolumn = "%s %l %r "
 vim.opt.mouse = ""
 
 vim.g.rustaceanvim = {
