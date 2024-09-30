@@ -41,9 +41,8 @@ vim.api.nvim_create_autocmd('TextYankPost', { group = vim.api.nvim_create_augrou
 })
 
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='white', bold=true })
-vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
+vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bg='black', bold=true })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='white', bold=true })
--- #FB508F
 
 -- transparent background
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
