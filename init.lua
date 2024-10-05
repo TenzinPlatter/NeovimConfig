@@ -40,9 +40,9 @@ vim.api.nvim_create_autocmd('TextYankPost', { group = vim.api.nvim_create_augrou
   end,
 })
 
-vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='white', bold=true })
-vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bg='black', bold=true })
-vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='white', bold=true })
+-- vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='white', bold=true })
+-- vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bg='black', bold=true })
+-- vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='white', bold=true })
 
 -- transparent background
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -52,7 +52,7 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.cmd('hi Visual guibg=Black gui=none')
 -- vim.cmd('hi MatchParen guibg=#82aaff')
 vim.cmd('hi Search guibg=#FEFFA7')
-vim.cmd('hi CursorLineNr guibg=White')
+-- vim.cmd('hi CursorLineNr guibg=White')
 vim.cmd('hi ColorColumn guibg=Black')
 
 -- set no code wrap
