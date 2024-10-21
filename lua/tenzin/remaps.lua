@@ -1,5 +1,12 @@
--- center divs after wrap with abbreviation by emmet
-vim.keymap.set('n', '<leader>e', 'vat=')
+-- Navigate quick fix list 
+vim.keymap.set("n", "<leader>j", function() vim.cmd("cnext") end)
+vim.keymap.set("n", "<leader>k", function() vim.cmd("cprev") end)
+
+-- Use q as quotes for motions
+vim.keymap.set("n", "ciq", "ci\"")
+vim.keymap.set("n", "ciQ", "ci'")
+vim.keymap.set("n", "diq", "di\"")
+vim.keymap.set("n", "diQ", "di'")
 
 -- paste in insert from unnamed register
 vim.keymap.set('i', '<C-f>', '<C-r>"')
