@@ -58,9 +58,12 @@ vim.cmd('hi ColorColumn guibg=Black')
 -- set no code wrap
 vim.cmd('set nowrap')
 
---disables netrw
+-- disables netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- set nvim tree background transparent
+vim.cmd("hi NvimTreeNormal guibg=None ctermbg=None")
 
 -- for obsidian.nvim
 vim.opt.conceallevel = 1

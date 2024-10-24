@@ -1,7 +1,10 @@
 return {
 	"https://github.com/gelguy/wilder.nvim",
 	dependencies = {
-		"https://github.com/romgrk/fzy-lua-native"
+		"https://github.com/romgrk/fzy-lua-native",
+		"sharkdp/fd",
+		"nixprime/cpsm",
+		"kyazdani42/nvim-web-devicons",
 	},
 	config = function ()
 		local wilder = require('wilder')

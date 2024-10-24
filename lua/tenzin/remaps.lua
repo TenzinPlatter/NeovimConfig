@@ -34,7 +34,7 @@ end)
 -- put a semicolon on the end of a line
 vim.keymap.set("n", "<leader>;", "$a;<esc>")
 
--- make the window biger vertically
+-- make the window bigger vertically
 vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]], {})
 -- make the window smaller vertically
 vim.keymap.set("n", "-", [[<cmd>vertical resize -5<cr>]], {})

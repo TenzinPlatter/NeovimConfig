@@ -11,16 +11,32 @@ return {
 					"tokyonight",
 					"catppuccin",
 					"cyberdream",
+					"no-clown-fiesta",
+					"rose-pine",
 				}
+			})
+		end
+	},
+	{
+		"https://github.com/rose-pine/neovim",
+		name = "rose-pine",
+		config = function ()
+			require("rose-pine").setup({
+				variant = "moon",
 			})
 		end
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
-		config = function()
-			vim.cmd("colorscheme gruvbox")
-		end,
+	},
+	{
+		"https://github.com/aktersnurra/no-clown-fiesta.nvim",
+		config = function ()
+			require("no-clown-fiesta").setup({
+				transparent = true,
+			})
+		end
 	},
 	{
 		'https://github.com/wilmanbarrios/palenight.nvim',
@@ -45,7 +61,6 @@ return {
 					functions = { italic = true }
 				}
 			})
-			vim.cmd("colorscheme tokyonight")
 		end
 	},
 	{
@@ -56,8 +71,6 @@ return {
 				require("cyberdream").setup({
 					transparent = true,
 				})
-
-				vim.cmd("colorscheme cyberdream")
 			end
 	}
 }
