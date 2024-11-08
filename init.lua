@@ -40,10 +40,6 @@ vim.api.nvim_create_autocmd('TextYankPost', { group = vim.api.nvim_create_augrou
   end,
 })
 
--- vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='white', bold=true })
--- vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bg='black', bold=true })
--- vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='white', bold=true })
-
 -- transparent background
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -54,9 +50,6 @@ vim.cmd('hi Visual guibg=Black gui=none')
 vim.cmd('hi Search guibg=#FEFFA7')
 -- vim.cmd('hi CursorLineNr guibg=White')
 vim.cmd('hi ColorColumn guibg=Black')
-
--- set no code wrap
-vim.cmd('set nowrap')
 
 -- disables netrw
 vim.g.loaded_netrw = 1
@@ -96,9 +89,9 @@ vim.g.rustaceanvim = {
 					vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 
 					if vim.lsp.inlay_hint.is_enabled() then
-						print("Disabled inlay hints")
-					else
 						print("Enabled inlay hints")
+					else
+						print("Disabled inlay hints")
 					end
 				end)
     end,

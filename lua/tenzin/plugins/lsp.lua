@@ -25,7 +25,6 @@ return {
 					"lua_ls",
 					"markdown_oxide",
 					"pyright",
-					"rust_analyzer",
 					"emmet_language_server",
 					"emmet_ls",
 					"ts_ls",

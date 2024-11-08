@@ -2,6 +2,10 @@
 vim.keymap.set("n", "<leader>j", function() vim.cmd("cnext") end)
 vim.keymap.set("n", "<leader>k", function() vim.cmd("cprev") end)
 
+-- Navigate one screen line rather than actual line
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
+
 -- Use q as quotes for motions
 vim.keymap.set("n", "ciq", "ci\"")
 vim.keymap.set("n", "ciQ", "ci'")
@@ -32,7 +36,10 @@ vim.keymap.set('n', '<leader>/', function()
 end)
 
 -- put a semicolon on the end of a line
-vim.keymap.set("n", "<leader>;", "$a;<esc>")
+vim.keymap.set("n", "<leader>;", "A;<esc>")
+
+-- put a comma on the end of a line
+vim.keymap.set("n", "<leader>,", "A,<esc>")
 
 -- make the window bigger vertically
 vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]], {})
