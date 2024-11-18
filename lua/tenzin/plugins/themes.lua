@@ -7,13 +7,21 @@ return {
 			require("themery").setup({
 				themes = {
 					"gruvbox",
-					"palenight",
 					"tokyonight",
 					"catppuccin",
-					"cyberdream",
 					"no-clown-fiesta",
 					"rose-pine",
+					"kanagawa",
+					"github_dark",
 				}
+			})
+		end
+	},
+	{
+		"https://github.com/rebelot/kanagawa.nvim",
+		config = function ()
+			require("kanagawa").setup({
+				transparent = true,
 			})
 		end
 	},
@@ -23,6 +31,7 @@ return {
 		config = function ()
 			require("rose-pine").setup({
 				variant = "moon",
+				styles = { transparency = true, }
 			})
 		end
 	},
@@ -42,17 +51,14 @@ return {
 		end
 	},
 	{
-		'https://github.com/wilmanbarrios/palenight.nvim',
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("palenight").set()
-		end
-	},
-	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
+		config = function ()
+			require("catppuccin").setup({
+				transparent_background = true,
+			})
+		end
 	},
 	{
 		"https://github.com/folke/tokyonight.nvim",
@@ -67,13 +73,11 @@ return {
 		end
 	},
 	{
-			"scottmckendry/cyberdream.nvim",
-			lazy = false,
-			priority = 1000,
-			config = function()
-				require("cyberdream").setup({
-					transparent = true,
-				})
-			end
-	}
+		"https://github.com/projekt0n/github-nvim-theme",
+		config = function ()
+			require("github-theme").setup({
+				options = { transparent = true, }
+			})
+		end
+	},
 }

@@ -1,3 +1,4 @@
+vim.opt.termguicolors = true
 vim.g.mapleader = ' '
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -15,6 +16,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("tenzin.plugins", {})
 require("tenzin.remaps")
+
+-- colorizer has to be setup after
+require('colorizer').setup()
 
 -- disable deprecated messages on startup
 vim.deprecate = function() end
@@ -63,8 +67,6 @@ vim.opt.conceallevel = 1
 
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
-
-vim.opt.termguicolors = true
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
