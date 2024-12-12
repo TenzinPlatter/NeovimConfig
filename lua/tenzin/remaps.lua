@@ -1,3 +1,6 @@
+-- Format entire buffer
+vim.keymap.set("n", "<leader>=", "ggVG=");
+
 -- Navigate quick fix list 
 vim.keymap.set("n", "<leader>j", function() vim.cmd("cnext") end)
 vim.keymap.set("n", "<leader>k", function() vim.cmd("cprev") end)
@@ -40,6 +43,9 @@ vim.keymap.set("n", "<leader>;", "A;<esc>")
 
 -- put a comma on the end of a line
 vim.keymap.set("n", "<leader>,", "A,<esc>")
+
+-- put ! on end of line
+vim.keymap.set("n", "<leader>!", "A!<esc>");
 
 -- make the window bigger vertically
 vim.keymap.set("n", "=", [[<cmd>vertical resize +5<cr>]], {})

@@ -1,10 +1,13 @@
 return {
 	'https://github.com/nvim-treesitter/nvim-treesitter',
-	dependencies = {"https://github.com/nvim-treesitter/nvim-treesitter-textobjects"},
+	dependencies = {
+		"https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
+		"https://github.com/nvim-treesitter/nvim-treesitter-context",
+	},
 	lazy = false,
 	build = ":TSUpdate",
 	config = function()
-		require'nvim-treesitter.configs'.setup {
+		require( 'nvim-treesitter.configs' ).setup({
 		  ensure_installed = { "c", "cpp", "lua", "vim", "vimdoc", "query" },
 
 		  sync_install = false,
@@ -20,6 +23,6 @@ return {
 			matchup = {
 				enable = true,
 			}
-		}
+		})
 	end
 }
